@@ -7,28 +7,24 @@ The project demonstrates the complete analytical workflow - from data modeling a
 
 This dashboard helps visualize and track:
 
-Sales performance over time (USD & units)
+-> Sales analysis over time (USD & units)
 
-Cumulative sales by customer, region, and business unit
+-> Cumulative sales by customer, region, and business unit
 
-Sales vs. target comparison (% achievement)
+-> Sales vs. target performance (% achievement)
 
-Year-over-year (YoY) sales growth analysis
+-> Year-over-year sales growth analysis
 
-Payment status breakdown with overdue and on-time customer insights
+-> Payment status overview with customer insights and recommendations
 
 The goal is to provide business users and analysts with a clear, interactive view of sales and payment performance aligned with the fiscal year (FY25).
 
 **- Data Model**
 
-The solution follows a Star Schema structure for efficient querying and reporting.
+Star Schema 
+fact table: Sales
+dimension tables: Country-Hub-Region, Targets FY25, Payment Status, Calendar
 
-Type	Table Name	Description
-Fact	Sales	Transactional sales data (amount, quantity, date, customer, etc.)
-Dimension	Country-Hub-Region	Regional and geographical hierarchy
-Dimension	Targets_FY25	Sales targets per customer and region
-Dimension	Payment_Status	Payment categories and due dates
-Dimension	Calendar	Fiscal calendar used for time intelligence (DAX)
 
 **- Tools & Technologies**
 
@@ -57,11 +53,11 @@ DIVIDE([Total Sales], [Sales Target])
 
 **- Dashboard Features**
 
-✅ Dynamic filters by region, business unit, and customer
-✅ Drill-through pages for detailed customer payment analysis
-✅ Visual indicators for overdue invoices and target achievement
-✅ Interactive cards for KPIs (total sales, growth %, overdue %)
-✅ Clean and consistent layout for quick insights
+Dynamic filters by region, business unit, and customer |
+Drill-through pages for detailed customer payment analysis |
+Visual indicators for overdue invoices and target achievement |
+Interactive cards for KPIs (total sales, growth %, overdue %) |
+Clean and consistent layout for quick insights
 
 **- Key Learnings**
 
